@@ -1,0 +1,62 @@
+"use client"
+
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react"
+import { Play } from "lucide-react"
+
+export function VideoSection() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "-100px" })
+
+  return (
+    <section ref={ref} id="como-funciona" className="py-24 px-4 bg-zinc-950">
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2
+            className="text-3xl sm:text-4xl font-bold text-white mb-4"
+            style={{ fontFamily: "var(--font-instrument-sans)" }}
+          >
+            Como funciona SmallTalk
+          </h2>
+          <p className="text-zinc-400 max-w-2xl mx-auto">
+            Mirá cómo nuestros agentes de IA se integran a tu flujo de trabajo para transformar cada conversación en una oportunidad real. Desde entender un audio hasta validar un comprobante de pago: todo pasa en automático.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative aspect-video rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 group"
+        >
+          {/* Video placeholder - replace src with your actual video */}
+          <iframe
+            className="w-full h-full"
+            src="/vsl_smalltalk.webm"
+            title="SmallTalk Demo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+          
+          {/* Overlay gradient for aesthetics */}
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/20 to-transparent pointer-events-none" />
+        </motion.div>
+
+        {/* Optional caption */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center text-sm text-zinc-500 mt-6"
+        >
+          Demo de 2 minutos mostrando el agente en accion
+        </motion.p>
+      </div>
+    </section>
+  )
+}
