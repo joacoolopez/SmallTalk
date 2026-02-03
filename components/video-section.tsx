@@ -3,6 +3,8 @@
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Play } from "lucide-react"
+import { ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export function VideoSection() {
   const ref = useRef(null)
@@ -56,6 +58,24 @@ export function VideoSection() {
         >
           Demo de 2 minutos mostrando el agente en accion
         </motion.p>
+        {/* CTA Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="flex justify-center mt-8"
+        >
+          <Button
+            size="lg"
+            className="shimmer-btn bg-[#18214b] text-white hover:bg-[#252f5c] rounded-full px-12 h-14 text-base font-medium shadow-lg shadow-[#18214b]/30"
+            asChild
+          >
+            <a href="#calendly">
+              Agendar Demo
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </a>
+          </Button>
+        </motion.div>
       </div>
     </section>
   )
