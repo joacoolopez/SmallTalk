@@ -29,7 +29,7 @@ export function Navbar() {
       >
         {/* Logo */}
         <a href="#" className="flex items-center">
-          <span className="font-semibold text-white text-lg">SmallTalk</span>
+          <span className="font-semibold text-white text-lg">Koral</span>
         </a>
 
         {/* Desktop Nav Items */}

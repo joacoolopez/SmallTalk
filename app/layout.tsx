@@ -30,7 +30,7 @@ const calSans = DM_Sans({ // Declare the variable here
 })
 
 export const metadata: Metadata = {
-  title: "SmallTalk | Agentes de IA",
+  title: "Koral | Agentes de IA",
   description: "Delegá tu atención al cliente en agentes de IA que califican leads, agendan citas y cierran ventas por WhatsApp las 24/7. Integración nativa con Mercado Pago y métricas en tiempo real.",
   icons: {
     icon: '/SmallTalk.ico'

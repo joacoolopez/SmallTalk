@@ -19,7 +19,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <a href="#" className="flex items-center mb-4">
-              <span className="font-semibold text-white text-lg">SmallTalk</span>
+              <span className="font-semibold text-white text-lg">Koral</span>
             </a>
             <p className="text-sm text-zinc-500 mb-4 max-w-xs">Agentes de IA que venden por vos, mientras hacés crecer tu negocio.</p>
             {/* System Status */}

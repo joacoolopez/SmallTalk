@@ -23,7 +23,7 @@ export function VideoSection() {
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
-            Como funciona SmallTalk
+            Como funciona Koral
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">
             Mirá cómo nuestros agentes de IA se integran a tu flujo de trabajo para transformar cada conversación en una oportunidad real. Desde entender un audio hasta validar un comprobante de pago: todo pasa en automático.
@@ -40,7 +40,7 @@ export function VideoSection() {
           <iframe
             className="w-full h-full"
             src="/vsl_smalltalk.webm"
-            title="SmallTalk Demo"
+            title="Koral Demo"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
