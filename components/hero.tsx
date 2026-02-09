@@ -68,7 +68,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Small Talk se integra a su flujo de trabajo para gestionar leads y ventas de forma autónoma. Con capacidad para validar pagos y automatizar el seguimiento, nuestros agentes aseguran una disponibilidad total 24/7.
+          Koral se integra a su flujo de trabajo para gestionar leads y ventas de forma autónoma. Con capacidad para validar pagos y automatizar el seguimiento, nuestros agentes aseguran una disponibilidad total 24/7.
         </motion.p>
 
         {/* CTAs */}
