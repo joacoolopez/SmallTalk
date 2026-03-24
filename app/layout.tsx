@@ -22,18 +22,11 @@ const instrumentSans = DM_Sans({
   display: "swap",
 })
 
-const calSans = DM_Sans({ // Declare the variable here
-  subsets: ["latin"],
-  variable: "--font-cal-sans",
-  weight: ["600", "700"],
-  display: "swap",
-})
-
 export const metadata: Metadata = {
   title: "Koral | Agentes de IA",
   description: "Delegá tu atención al cliente en agentes de IA que califican leads, agendan citas y cierran ventas por WhatsApp las 24/7. Integración nativa con Mercado Pago y métricas en tiempo real.",
   icons: {
-    icon: '/SmallTalk.ico'
+    icon: '/Koral.ico'
   },
 }
 

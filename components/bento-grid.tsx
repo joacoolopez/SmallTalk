@@ -20,7 +20,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
     },
   },
 }
@@ -131,7 +131,7 @@ export function BentoGrid() {
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
-            Todo lo que necesitas para vender mas
+            Todo lo que necesitas para vender más
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">
             Tecnología que trabaja 24/7 para que tu única preocupación sea ver cómo crecen los números.
@@ -155,7 +155,7 @@ export function BentoGrid() {
                 <div className="p-2 rounded-lg bg-[#18214b]/40 w-fit mb-4">
                   <MessageCircle className="w-5 h-5 text-[#5a6cb5]" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Agente de Atencion 24/7</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">Agente de Atención 24/7</h3>
                 <p className="text-zinc-400 text-sm">
                   Resolvé dudas sobre tus productos o servicios al instante. Que nadie se vaya a la competencia porque tardaste en contestar.
                 </p>
@@ -163,7 +163,7 @@ export function BentoGrid() {
               <SystemStatus />
             </div>
             <div className="grid grid-cols-3 gap-4">
-              {["Mensajes", "Respuestas", "Satisfaccion"].map((metric, index) => (
+              {["Mensajes", "Respuestas", "Satisfacción"].map((metric, index) => (
                 <div key={metric} className="text-center">
                   <div className="text-2xl font-bold text-white mb-1">{["+10K", "99%", "4.9"][index]}</div>
                   <div className="text-xs text-zinc-500">{metric}</div>
@@ -180,7 +180,7 @@ export function BentoGrid() {
             <div className="p-2 rounded-lg bg-blue-500/20 w-fit mb-4">
               <Calendar className="w-5 h-5 text-blue-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Agenda Automatica</h3>
+            <h3 className="text-lg font-semibold text-white mb-2">Agenda Automática</h3>
             <p className="text-zinc-400 text-sm mb-6">El agente gestiona tu calendario y reserva citas sin que muevas un dedo. Integración directa con Google Calendar para que tu agenda vuele.</p>
           </motion.div>
 
@@ -193,7 +193,7 @@ export function BentoGrid() {
               <CreditCard className="w-5 h-5 text-amber-500" strokeWidth={1.5} />
             </div>
             <h3 className="text-lg font-semibold text-white mb-2">Ventas con MercadoPago</h3>
-            <p className="text-zinc-400 text-sm mb-4">Cierra ventas directamente en el chat con links de pago automaticos.</p>
+            <p className="text-zinc-400 text-sm mb-4">Cierra ventas directamente en el chat con links de pago automáticos.</p>
             <AnimatedChart />
           </motion.div>
 
@@ -205,13 +205,13 @@ export function BentoGrid() {
             <div className="p-2 rounded-lg bg-purple-500/20 w-fit mb-4">
               <BarChart3 className="w-5 h-5 text-purple-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Dashboard de Metricas</h3>
+            <h3 className="text-lg font-semibold text-white mb-2">Dashboard de Métricas</h3>
             <p className="text-zinc-400 text-sm mb-4">
               Lo que no se mide, no crece. Analizá cada conversación y tasa de conversión para tomar decisiones basadas en datos reales, no en intuiciones.
             </p>
             <div className="flex items-center gap-2 text-purple-400 text-sm">
               <span className="font-mono">+45%</span>
-              <span className="text-zinc-500">conversion promedio</span>
+              <span className="text-zinc-500">conversión promedio</span>
             </div>
           </motion.div>
 

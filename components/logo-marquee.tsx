@@ -9,7 +9,7 @@ const logos = [
   { name: "E-commerce", width: 100 },
   { name: "Salones de Belleza", width: 100 },
   { name: "Gimnasios", width: 90 },
-  { name: "Consultorios Medicos", width: 100 },
+  { name: "Consultorios Médicos", width: 100 },
   { name: "Tiendas", width: 90 },
 ]
 

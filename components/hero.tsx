@@ -11,7 +11,7 @@ const textRevealVariants = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
       delay: i * 0.1,
     },
   }),
@@ -107,7 +107,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="flex flex-wrap items-center justify-center gap-6"
         >
-          {["Disponible 24/7", "Respuestas instantaneas", "Integrado con WhatsApp"].map((benefit, index) => (
+          {["Disponible 24/7", "Respuestas instantáneas", "Integrado con WhatsApp"].map((benefit, index) => (
             <div key={index} className="flex items-center gap-2 text-sm text-zinc-400">
               <span className="w-1.5 h-1.5 rounded-full bg-[#5a6cb5]" />
               <span>{benefit}</span>

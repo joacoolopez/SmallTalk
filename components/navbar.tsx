@@ -1,13 +1,13 @@
 "use client"
 
 import { useState, useRef } from "react"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navItems = [
   { label: "Soluciones", href: "#features" },
-  { label: "Como Funciona", href: "#como-funciona" },
+  { label: "Cómo Funciona", href: "#como-funciona" },
   { label: "Contacto", href: "#calendly" },
 ]
 
@@ -75,35 +75,37 @@ export function Navbar() {
       </nav>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          className="absolute top-full left-0 right-0 mt-2 p-4 rounded-2xl bg-zinc-900/95 backdrop-blur-md border border-zinc-800"
-        >
-          <div className="flex flex-col gap-2">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="px-4 py-3 text-sm text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="absolute top-full left-0 right-0 mt-2 p-4 rounded-2xl bg-zinc-900/95 backdrop-blur-md border border-zinc-800"
+          >
+            <div className="flex flex-col gap-2">
+              {navItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="px-4 py-3 text-sm text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+              <hr className="border-zinc-800 my-2" />
+              <Button className="shimmer-btn bg-[#18214b] text-white hover:bg-[#252f5c] rounded-full">
+              <a 
+                href="#calendly" 
               >
-                {item.label}
+                Agendar Demo
               </a>
-            ))}
-            <hr className="border-zinc-800 my-2" />
-            <Button className="shimmer-btn bg-[#18214b] text-white hover:bg-[#252f5c] rounded-full">
-            <a 
-              href="#calendly" 
-            >
-              Agendar Demo
-            </a>
-            </Button>
-          </div>
-        </motion.div>
-      )}
+              </Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   )
 }

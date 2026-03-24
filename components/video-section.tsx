@@ -2,7 +2,6 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { Play } from "lucide-react"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -23,7 +22,7 @@ export function VideoSection() {
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
-            Como funciona Koral
+            Cómo funciona Koral
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">
             Mirá cómo nuestros agentes de IA se integran a tu flujo de trabajo para transformar cada conversación en una oportunidad real. Desde entender un audio hasta validar un comprobante de pago: todo pasa en automático.
@@ -36,13 +35,13 @@ export function VideoSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative aspect-video rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 group"
         >
-          {/* Video placeholder - replace src with your actual video */}
-          <iframe
-            className="w-full h-full"
-            src="/vsl_smalltalk.webm"
+          <video
+            className="w-full h-full object-cover"
+            src="/VSL-Koral.mp4"
             title="Koral Demo"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+            controls
+            playsInline
+            preload="metadata"
           />
           
           {/* Overlay gradient for aesthetics */}
@@ -56,7 +55,7 @@ export function VideoSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center text-sm text-zinc-500 mt-6"
         >
-          Demo de 2 minutos mostrando el agente en accion
+          Demo de 2 minutos mostrando el agente en acción
         </motion.p>
         {/* CTA Button */}
         <motion.div

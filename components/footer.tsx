@@ -35,7 +35,7 @@ export function Footer() {
               Soluciones
             </a>
             <a href="#como-funciona" className="text-sm text-zinc-500 hover:text-white transition-colors">
-              Como Funciona
+              Cómo Funciona
             </a>
             <a 
               href="https://instagram.com/small.talk.ai" 

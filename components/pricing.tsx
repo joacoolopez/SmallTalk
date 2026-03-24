@@ -7,10 +7,10 @@ import { Button } from "@/components/ui/button"
 
 const plans = [
   {
-    name: "Basico",
-    description: "Ideal para negocios que recien empiezan",
+    name: "Básico",
+    description: "Ideal para negocios que recién empiezan",
     price: { monthly: 49, yearly: 39 },
-    features: ["Agente de atencion 24/7", "500 conversaciones/mes", "Respuestas personalizadas", "Soporte por email", "Dashboard basico"],
+    features: ["Agente de atención 24/7", "500 conversaciones/mes", "Respuestas personalizadas", "Soporte por email", "Dashboard básico"],
     cta: "Comenzar Ahora",
     highlighted: false,
   },
@@ -19,11 +19,11 @@ const plans = [
     description: "Para negocios que quieren escalar sus ventas",
     price: { monthly: 99, yearly: 79 },
     features: [
-      "Todo lo del plan Basico",
-      "Agenda de citas automatica",
-      "Integracion MercadoPago",
+      "Todo lo del plan Básico",
+      "Agenda de citas automática",
+      "Integración MercadoPago",
       "2,000 conversaciones/mes",
-      "Dashboard de metricas",
+      "Dashboard de métricas",
       "Email marketing incluido",
       "Soporte prioritario",
     ],
@@ -32,7 +32,7 @@ const plans = [
   },
   {
     name: "Empresarial",
-    description: "Solucion completa para grandes operaciones",
+    description: "Solución completa para grandes operaciones",
     price: { monthly: 249, yearly: 199 },
     features: [
       "Todo lo del plan Profesional",
@@ -146,7 +146,7 @@ export function Pricing() {
 
               {plan.highlighted && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-emerald-500 text-zinc-950 text-xs font-medium rounded-full">
-                  Mas Popular
+                  Más Popular
                 </div>
               )}
 
@@ -158,10 +158,10 @@ export function Pricing() {
               <div className="mb-6">
                 <div className="flex items-baseline gap-1">
                   <span className="text-4xl font-bold text-white">${plan.price[billingCycle]}</span>
-                  {plan.price.monthly > 0 && <span className="text-zinc-400 text-sm">/month</span>}
+                  {plan.price.monthly > 0 && <span className="text-zinc-400 text-sm">/mes</span>}
                 </div>
                 {billingCycle === "yearly" && plan.price.yearly > 0 && (
-                  <p className="text-xs text-zinc-500 mt-1">Facturado anualmente (${plan.price.yearly * 12}/ano)</p>
+                  <p className="text-xs text-zinc-500 mt-1">Facturado anualmente (${plan.price.yearly * 12}/año)</p>
                 )}
               </div>
 
@@ -180,8 +180,9 @@ export function Pricing() {
                     ? "shimmer-btn bg-emerald-500 text-zinc-950 hover:bg-emerald-400"
                     : "bg-zinc-800 text-white hover:bg-zinc-700 border border-zinc-700"
                 }`}
+                asChild
               >
-                {plan.cta}
+                <a href="#calendly">{plan.cta}</a>
               </Button>
             </motion.div>
           ))}
